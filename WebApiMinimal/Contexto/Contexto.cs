@@ -6,13 +6,14 @@ namespace WebApiMinimal.Contexto
     public class Contexto : DbContext
     {
         public Contexto(DbContextOptions<Contexto> options)
-            : base(options)
-        {
-            Database.EnsureCreated();
-        }
+            : base(options) => Database.EnsureCreated();
+        
 
-        public DbSet<Produtos> produto { get; set; }
-
+        public DbSet<Produto> Produto { get; set; }
     }
+
+        
+
+    
 }
  
